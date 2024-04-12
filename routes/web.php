@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\BlockController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CursoController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,8 +31,6 @@ Route ::get('/curso/eliminar/{palabra}', function ($palabra){
     return "Aqui vamos a eliminar el curso: " .$palabra;
 });
 
+Route::get('/cursos/new' , [CursoController ::class,'nuevo']);
 
-Route::get('/cursos')
-
-
-
+Route::resource('blog', BlockController::class);
