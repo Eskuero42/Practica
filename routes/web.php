@@ -6,7 +6,7 @@ use App\Http\Controllers\CursoController;
 
 
 Route::get('/', function () {
-    return view('estateagency.plantilla');
+    return view('InterfazPractica.interfaz');
 });
 
 Route ::get('/home', function (){
