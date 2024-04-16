@@ -26,11 +26,10 @@ Route ::get('/curso/eliminar', function (){
     return "Aqui vamos a eliminar el curso: ";
 });
 
-
 Route ::get('/curso/eliminar/{palabra}', function ($palabra){
     return "Aqui vamos a eliminar el curso: " .$palabra;
 });
 
 Route::get('/cursos/new' , [CursoController ::class,'nuevo']);
 
-Route::resource('blog', BlockController::class);
+Route::resource('block', BlockController::class);
