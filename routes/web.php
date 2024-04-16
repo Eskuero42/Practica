@@ -6,7 +6,7 @@ use App\Http\Controllers\CursoController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('estateagency.plantilla');
 });
 
 Route ::get('/home', function (){
@@ -33,3 +33,5 @@ Route ::get('/curso/eliminar/{palabra}', function ($palabra){
 Route::get('/cursos/new' , [CursoController ::class,'nuevo']);
 
 Route::resource('block', BlockController::class);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
