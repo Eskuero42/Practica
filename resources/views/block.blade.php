@@ -1,7 +1,9 @@
-@extends('plantilla')
+@extends('estateagency.layout.plantilla')
 @section('title','Home')
-@section('content')
-    <h1>
-        Bienvenido a este blog
-    </h1>
+@section('intro')
+    @parent
+@endsection
+@section('contentmain')
+@parent
+@include('estateagency.casa.secciones.agents')
 @endsection
